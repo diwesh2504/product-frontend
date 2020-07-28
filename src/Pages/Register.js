@@ -12,7 +12,7 @@ function Register(){
             email:new_email
         }
         let flag=0;
-        fetch(`http://localhost:4040/users`)
+        fetch(`https://product-task.herokuapp.com/users`)
         .then(res=>res.json())
         .then(data=>{
           data.map(each=>{
