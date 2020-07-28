@@ -7,7 +7,7 @@ function Login(){
         e.preventDefault();
         let getEmail=document.getElementById('email').value;
         let getPass=document.getElementById('pass').value;
-        fetch(`http://localhost:4040/users/${getEmail}`)
+        fetch(`https://product-task.herokuapp.com/users/${getEmail}`)
         .then(res=>res.json())
         .then(data=>{
             localStorage.setItem("user",JSON.stringify(data));

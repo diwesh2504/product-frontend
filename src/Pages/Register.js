@@ -30,7 +30,7 @@ function Register(){
         }
        else{
           
-          fetch(`http://localhost:4040/register`,{
+          fetch(`https://product-task.herokuapp.com/register`,{
               method:'POST',
               body:JSON.stringify(json_data),
               headers:{

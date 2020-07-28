@@ -17,7 +17,7 @@ function AddItems(){
 
         }
         console.log(json_datas);
-        fetch(`http://localhost:4040/additem`,{
+        fetch(`https://product-task.herokuapp.com/additem`,{
             method:'POST',
             body:JSON.stringify(json_datas),
             headers:{

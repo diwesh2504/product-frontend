@@ -3,7 +3,7 @@ import React from 'react';
 function ProductListing(){
     const [products,setProducts]=React.useState([])
     React.useEffect(()=>{
-        fetch('http://localhost:4040/getitems')
+        fetch('https://product-task.herokuapp.com/getitems')
         .then(res=>res.json())
         .then(data=>setProducts(data))
         .catch(err=>console.log(err));

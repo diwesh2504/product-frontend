@@ -7,14 +7,14 @@ function Userview(props){
     const [quantity,setQuantity]=React.useState([]);
     let bought={items:[],quantity:[]};
     React.useEffect(()=>{
-        fetch('http://localhost:4040/getitems')
+        fetch('https://product-task.herokuapp.com/getitems')
         .then(res=>res.json())
         .then(data=>setItems(data))
         .catch(err=>console.log(err));
     },[items])
     function handleBuy(e){
         console.log("button clicked for id:",e.target.id);
-        fetch(`http://localhost:4040/update/${e.target.id}`)
+        fetch(`https://product-task.herokuapp.com/update/${e.target.id}`)
         .then(res=>res.json())
         .then(d=>{
                 let flag=0;
